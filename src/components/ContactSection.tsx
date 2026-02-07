@@ -56,26 +56,76 @@ const ContactSection = () => {
         <form onSubmit={handleSubmit} className="space-y-5 bg-card p-8 rounded-2xl shadow-lg border border-border">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <input name="nombre" placeholder="Nombre *" value={form.nombre} onChange={handleChange} className={inputClass("nombre")} />
-              {errors.nombre && <p className="text-destructive text-xs mt-1">{errors.nombre}</p>}
+              <label htmlFor="nombre" className="sr-only">Nombre</label>
+              <input 
+                id="nombre"
+                name="nombre" 
+                placeholder="Nombre *" 
+                value={form.nombre} 
+                onChange={handleChange} 
+                className={inputClass("nombre")} 
+                aria-invalid={!!errors.nombre}
+                aria-describedby={errors.nombre ? "nombre-error" : undefined}
+              />
+              {errors.nombre && <p id="nombre-error" className="text-destructive text-xs mt-1" role="alert">{errors.nombre}</p>}
             </div>
             <div>
-              <input name="email" type="email" placeholder="Email *" value={form.email} onChange={handleChange} className={inputClass("email")} />
-              {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
+              <label htmlFor="email" className="sr-only">Email</label>
+              <input 
+                id="email"
+                name="email" 
+                type="email" 
+                placeholder="Email *" 
+                value={form.email} 
+                onChange={handleChange} 
+                className={inputClass("email")} 
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
+              />
+              {errors.email && <p id="email-error" className="text-destructive text-xs mt-1" role="alert">{errors.email}</p>}
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <input name="telefono" placeholder="Teléfono *" value={form.telefono} onChange={handleChange} className={inputClass("telefono")} />
-              {errors.telefono && <p className="text-destructive text-xs mt-1">{errors.telefono}</p>}
+              <label htmlFor="telefono" className="sr-only">Teléfono</label>
+              <input 
+                id="telefono"
+                name="telefono" 
+                placeholder="Teléfono *" 
+                value={form.telefono} 
+                onChange={handleChange} 
+                className={inputClass("telefono")} 
+                aria-invalid={!!errors.telefono}
+                aria-describedby={errors.telefono ? "telefono-error" : undefined}
+              />
+              {errors.telefono && <p id="telefono-error" className="text-destructive text-xs mt-1" role="alert">{errors.telefono}</p>}
             </div>
             <div>
-              <input name="empresa" placeholder="Empresa (opcional)" value={form.empresa} onChange={handleChange} className={inputClass("empresa")} />
+              <label htmlFor="empresa" className="sr-only">Empresa</label>
+              <input 
+                id="empresa"
+                name="empresa" 
+                placeholder="Empresa (opcional)" 
+                value={form.empresa} 
+                onChange={handleChange} 
+                className={inputClass("empresa")} 
+              />
             </div>
           </div>
           <div>
-            <textarea name="mensaje" placeholder="Mensaje *" rows={4} value={form.mensaje} onChange={handleChange} className={inputClass("mensaje")} />
-            {errors.mensaje && <p className="text-destructive text-xs mt-1">{errors.mensaje}</p>}
+            <label htmlFor="mensaje" className="sr-only">Mensaje</label>
+            <textarea 
+              id="mensaje"
+              name="mensaje" 
+              placeholder="Mensaje *" 
+              rows={4} 
+              value={form.mensaje} 
+              onChange={handleChange} 
+              className={inputClass("mensaje")} 
+              aria-invalid={!!errors.mensaje}
+              aria-describedby={errors.mensaje ? "mensaje-error" : undefined}
+            />
+            {errors.mensaje && <p id="mensaje-error" className="text-destructive text-xs mt-1" role="alert">{errors.mensaje}</p>}
           </div>
           <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-md shadow-primary/20">
             <Send size={18} /> Enviar Mensaje

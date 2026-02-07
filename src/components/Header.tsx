@@ -32,7 +32,12 @@ const Header = () => {
           </a>
         </nav>
 
-        <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)}>
+        <button 
+          className="md:hidden text-primary-foreground p-3 -mr-3" 
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+        >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

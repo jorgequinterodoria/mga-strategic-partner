@@ -31,7 +31,11 @@ const HeroSection = () => (
       </a>
 
       <div className="mt-16 animate-bounce">
-        <a href="#servicios" className="text-primary-foreground/40 hover:text-primary transition-colors">
+        <a 
+          href="#servicios" 
+          className="text-primary-foreground/40 hover:text-primary transition-colors p-4 block"
+          aria-label="Ir a sección de servicios"
+        >
           <ArrowDown size={28} className="mx-auto" />
         </a>
       </div>
