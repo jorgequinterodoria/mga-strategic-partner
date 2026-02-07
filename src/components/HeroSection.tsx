@@ -1,15 +1,15 @@
 import { ArrowDown } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => (
-  <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
-    {/* Decorative elements */}
-    <div className="absolute inset-0 opacity-10">
-      <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-primary blur-[120px]" />
-      <div className="absolute bottom-20 left-20 w-72 h-72 rounded-full bg-primary blur-[100px]" />
-    </div>
+  <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    {/* Background image */}
+    <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-secondary/80" />
 
     <div className="container mx-auto px-4 text-center relative z-10 pt-20">
-      <div className="inline-block bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 tracking-wide">
+      <div className="inline-block bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 tracking-wide backdrop-blur-sm border border-primary/20">
         Consultoría & Capacitación
       </div>
 
