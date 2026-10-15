@@ -26,7 +26,7 @@ const TestimonialsSection = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <span className="text-primary font-semibold text-sm tracking-widest uppercase">Testimonios</span>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2" style={{ fontFamily: 'Montserrat' }}>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2">
           Lo que dicen nuestros clientes
         </h2>
         <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
@@ -43,7 +43,7 @@ const TestimonialsSection = () => (
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
             <div className="border-t border-border pt-4">
-              <p className="font-bold text-foreground text-sm" style={{ fontFamily: 'Montserrat' }}>{t.name}</p>
+              <p className="font-bold text-foreground text-sm">{t.name}</p>
               <p className="text-muted-foreground text-xs">{t.role} · {t.company}</p>
             </div>
           </div>

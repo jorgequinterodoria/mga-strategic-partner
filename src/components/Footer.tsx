@@ -1,15 +1,21 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import mgaLogo from "@/assets/mga-logo.jpg";
+// Recurso oficial de marca: forma compuesta (isologo MGA + identificador CONSULTOR EMPRESARIAL).
+// Derivado de "Logo MGA.svg" recortando únicamente el lienzo vacío del export.
+import mgaFormaCompuesta from "@/assets/mga-forma-compuesta.svg";
 
 const Footer = () => (
   <footer className="bg-secondary text-primary-foreground py-12 border-t border-white/10">
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="flex items-center gap-3">
-          <img src={mgaLogo} alt="MGA" className="h-10 w-10 rounded-full object-cover" />
-          <span className="font-bold text-lg" style={{ fontFamily: 'Montserrat' }}>
-            MGA <span className="text-primary font-normal">Consultor Empresarial</span>
-          </span>
+        {/* H-04 / H-05: composición oficial completa, mínimo digital 120 px (Manual V002, numeral 5). */}
+        <div className="flex items-center">
+          <img
+            src={mgaFormaCompuesta}
+            alt="MGA Consultor Empresarial"
+            width={553}
+            height={235}
+            className="h-auto w-[200px] sm:w-[240px]"
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 text-sm text-primary-foreground/60">

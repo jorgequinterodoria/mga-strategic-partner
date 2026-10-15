@@ -22,7 +22,7 @@ const ServicesSection = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <span className="text-primary font-semibold text-sm tracking-widest uppercase">Lo que hacemos</span>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2" style={{ fontFamily: 'Montserrat' }}>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2">
           Nuestros Servicios
         </h2>
         <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
@@ -37,7 +37,7 @@ const ServicesSection = () => (
             <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
               <s.icon size={28} className="text-primary group-hover:text-primary-foreground transition-colors" />
             </div>
-            <h3 className="font-bold text-foreground text-lg mb-2" style={{ fontFamily: 'Montserrat' }}>{s.title}</h3>
+            <h3 className="font-bold text-foreground text-lg mb-2">{s.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
           </div>
         ))}

@@ -23,3 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Informes de auditoría del cliente (no publicar en repo público)
+audit/

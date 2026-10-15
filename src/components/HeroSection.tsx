@@ -13,7 +13,7 @@ const HeroSection = () => (
         Consultoría & Capacitación
       </div>
 
-      <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight mb-6" style={{ fontFamily: 'Montserrat' }}>
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight mb-6">
         SOMOS TU ALIADO
         <br />
         <span className="text-primary">ESTRATÉGICO</span>

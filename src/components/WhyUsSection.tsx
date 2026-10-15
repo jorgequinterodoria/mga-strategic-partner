@@ -12,7 +12,7 @@ const WhyUsSection = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <span className="text-primary font-semibold text-sm tracking-widest uppercase">Nuestra propuesta</span>
-        <h2 className="text-3xl md:text-4xl font-extrabold mt-2" style={{ fontFamily: 'Montserrat' }}>
+        <h2 className="text-3xl md:text-4xl font-extrabold mt-2">
           ¿Por qué elegirnos?
         </h2>
         <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
@@ -23,7 +23,7 @@ const WhyUsSection = () => (
           <div key={r.title} className="flex gap-4 items-start bg-white/5 rounded-xl p-6 border border-white/10">
             <CheckCircle2 size={32} className="text-primary shrink-0 mt-1" />
             <div>
-              <h3 className="font-bold text-lg mb-1" style={{ fontFamily: 'Montserrat' }}>{r.title}</h3>
+              <h3 className="font-bold text-lg mb-1">{r.title}</h3>
               <p className="text-primary-foreground/70 text-sm leading-relaxed">{r.desc}</p>
             </div>
           </div>
