@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+// Imagen del hero en WebP (q80): 1717 KB → 75 KB sin pérdida visible.
+import heroBg from "@/assets/hero-bg.webp";
 
 const HeroSection = () => (
   <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
