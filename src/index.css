@@ -25,7 +25,8 @@
     --secondary-foreground: 0 0% 100%;
 
     --muted: 30 20% 96%;
-    --muted-foreground: 0 0% 45%;
+    /* Manual V002 numeral 6.2: gris primario oficial #7C7B7B (H-02, revisión de coherencia) */
+    --muted-foreground: 0 0.4% 48.4%;
 
     --accent: 36.1 73.2% 49.8%;
     --accent-foreground: 0 0% 100%;

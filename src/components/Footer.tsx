@@ -19,8 +19,8 @@ const Footer = () => (
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 text-sm text-primary-foreground/60">
-          <span className="flex items-center gap-2"><Mail size={16} className="text-primary" /> info@mgaconsultor.com</span>
-          <span className="flex items-center gap-2"><Phone size={16} className="text-primary" /> +57 300 000 0000</span>
+          <span className="flex items-center gap-2"><Mail size={16} className="text-primary" /> gerencia@mgaconsultor.com.co</span>
+          <span className="flex items-center gap-2"><Phone size={16} className="text-primary" /> +57 300 792 3166</span>
           <span className="flex items-center gap-2"><MapPin size={16} className="text-primary" /> Colombia</span>
         </div>
       </div>

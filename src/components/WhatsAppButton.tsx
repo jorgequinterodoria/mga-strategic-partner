@@ -7,7 +7,7 @@
  * El verde de WhatsApp (#25D366) no está autorizado por el manual.
  */
 const WhatsAppButton = () => {
-  const phoneNumber = "573300792316";
+  const phoneNumber = "573007923166";
   const message = "Hola, me gustaría recibir más información sobre sus servicios de consultoría.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

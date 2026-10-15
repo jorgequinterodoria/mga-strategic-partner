@@ -26,3 +26,6 @@ dist-ssr
 
 # Informes de auditoría del cliente (no publicar en repo público)
 audit/
+
+# Respaldo local de la imagen del hero (no usar en el sitio)
+src/assets/hero-bg_.jpg
