@@ -2,6 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Send } from "lucide-react";
+import { buildContactWhatsAppMessage, buildWhatsAppUrl, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
 const contactSchema = z.object({
   nombre: z.string().trim().min(1, "El nombre es requerido").max(100),
@@ -34,9 +35,12 @@ const ContactSection = () => {
       setErrors(fieldErrors);
       return;
     }
-    toast.success("¡Mensaje enviado! Nos pondremos en contacto pronto.");
-    setForm({ nombre: "", email: "", telefono: "", empresa: "", mensaje: "" });
-    setErrors({});
+    window.open(buildWhatsAppUrl(buildContactWhatsAppMessage(result.data)), "_blank", "noopener,noreferrer");
+    toast.success(
+      `Se abrió WhatsApp con tu mensaje hacia ${WHATSAPP_DISPLAY}. Completa el envío desde la aplicación.`
+    );
+    // El mensaje solo se prepara (no hay backend): se conservan los datos del
+    // formulario por si el navegador bloquea la pestaña o WhatsApp no abre.
   };
 
   const inputClass = (field: keyof FormData) =>

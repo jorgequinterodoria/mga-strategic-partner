@@ -6,10 +6,10 @@
  * con consistencia de color, grosor de trazo y tamaño de círculo.
  * El verde de WhatsApp (#25D366) no está autorizado por el manual.
  */
+import { buildWhatsAppUrl, WHATSAPP_DEFAULT_MESSAGE } from "@/lib/whatsapp";
+
 const WhatsAppButton = () => {
-  const phoneNumber = "573007923166";
-  const message = "Hola, me gustaría recibir más información sobre sus servicios de consultoría.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = buildWhatsAppUrl(WHATSAPP_DEFAULT_MESSAGE);
 
   return (
     <a
