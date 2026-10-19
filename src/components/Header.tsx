@@ -14,10 +14,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between gap-4 py-3 px-4">
         {/* H-04 / H-05: composición oficial completa (no reconstruida con texto independiente).
-            Ancho mínimo digital: 120 px para la forma compuesta (Manual V002, numeral 5). */}
+            Ancho mínimo digital: 120 px para la forma compuesta (Manual, numeral 5). */}
         <a href="#inicio" className="flex items-center shrink-0" aria-label="MGA Consultor Empresarial - Inicio">
           <img
             src={mgaFormaCompuesta}
@@ -30,17 +30,17 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-primary-foreground/80 hover:text-primary transition-colors text-sm font-medium">
+            <a key={l.href} href={l.href} className="text-foreground/70 hover:text-primary transition-colors text-sm font-medium">
               {l.label}
             </a>
           ))}
           <a href="#contacto" className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-colors">
-            Contáctanos
+            Solicitar cotización
           </a>
         </nav>
 
         <button 
-          className="md:hidden text-primary-foreground p-3 -mr-3" 
+          className="md:hidden text-foreground p-3 -mr-3" 
           onClick={() => setOpen(!open)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
@@ -50,14 +50,14 @@ const Header = () => {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-secondary border-t border-white/10 px-4 pb-4">
+        <nav className="md:hidden bg-background border-t border-border px-4 pb-4">
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block py-3 text-primary-foreground/80 hover:text-primary transition-colors text-sm font-medium border-b border-white/5">
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block py-3 text-foreground/70 hover:text-primary transition-colors text-sm font-medium border-b border-border">
               {l.label}
             </a>
           ))}
           <a href="#contacto" onClick={() => setOpen(false)} className="block mt-3 bg-primary text-primary-foreground text-center px-5 py-2 rounded-lg text-sm font-semibold">
-            Contáctanos
+            Solicitar cotización
           </a>
         </nav>
       )}

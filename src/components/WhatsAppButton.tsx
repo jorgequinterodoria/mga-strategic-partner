@@ -1,9 +1,10 @@
 /**
  * Botón flotante de WhatsApp.
  *
- * Manual de Identidad Corporativa MGA V002, numeral 9.1 (sistema aprobado):
- * iconos circulares en naranja oficial #DC9222 sobre fondo blanco,
- * con consistencia de color, grosor de trazo y tamaño de círculo.
+ * Manual de Identidad Corporativa MGA, numeral 9.1. Precisión institucional
+ * (validación del 19/10/2026): círculo #DC9222 y símbolo blanco #FFFFFF,
+ * sin halo expansivo y sin ocultar textos ni controles. Se aplican los valores
+ * digitales aprobados; no se extrae el color de muestras históricas.
  * El verde de WhatsApp (#25D366) no está autorizado por el manual.
  */
 import { buildWhatsAppUrl, WHATSAPP_DEFAULT_MESSAGE } from "@/lib/whatsapp";
@@ -16,12 +17,9 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-white border border-primary/30 text-primary rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      className="group fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-primary text-primary-foreground border border-primary rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
       aria-label="Contáctanos por WhatsApp"
     >
-      {/* Halo de pulso en naranja oficial (paleta aprobada) */}
-      <span className="absolute inset-0 rounded-full bg-primary opacity-40 animate-ping -z-10" aria-hidden="true" />
-
       <svg
         viewBox="0 0 24 24"
         width="28"
